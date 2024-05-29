@@ -1,0 +1,92 @@
+﻿.mi-filters 
+{ 
+    display: inline-flex;
+    font-family:Segoe UI;
+    .action-btn 
+    { 
+        background-color: white; //#dfeef7; 
+        border: 1px solid lightgray; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        padding: 5px 18px; 
+        margin-top: 14px; 
+        outline: none;
+    }
+
+    .filter-container 
+    { 
+        vertical-align: top; 
+        margin-bottom: 8px;
+
+        label 
+        { 
+            margin-bottom: 0px !important; 
+        }
+
+        .common-filter-dd 
+        { 
+            border: 1px solid lightgray; 
+            padding: 0px 6px 0px 4px; 
+            margin: 2px 4px 0px 0px; 
+            border-radius: 4px; 
+            background-color: white;
+
+            .e-multiselect.e-input-group .e-ddl-icon::before 
+            { 
+                color: #7d7c7c; 
+            }
+
+            .e-multi-select-wrapper .e-chips-close.e-close-hooker 
+            { 
+                width: 16px !important; 
+            }
+        }
+
+        .clear-filter-cancel-icon{
+            .e-chips-close{
+                display: none !important;
+            }
+        }
+
+        .show-filter-cancel-icon{
+            .e-chips-close{
+                display: flex !important;
+            }
+        }
+    }
+}
+
+
+
+.e-checkbox-wrapper .e-frame.e-check, .e-css.e-checkbox-wrapper .e-frame.e-check 
+{ 
+    background-color: #1E48A4 !important; 
+}
+
+.e-popup.e-multi-select-list-wrapper .e-list-item 
+{ 
+    list-style: none; 
+}
+
+.e-input-filter 
+{ 
+    outline: none !important; 
+    width: 100%; 
+}
+
+.e-ddl.e-popup.e-multi-select-list-wrapper .e-filter-parent .e-input-filter, 
+.e-ddl.e-popup.e-multi-select-list-wrapper .e-filter-parent .e-input-group.e-input-focus .e-input-filter 
+{ 
+    padding: 4px !important; 
+}
+
+.e-checkbox-wrapper:hover .e-frame.e-check, 
+.e-css.e-checkbox-wrapper:hover .e-frame.e-check 
+{ 
+    background-color: #1E48A4; 
+}
+
+.e-checkbox-wrapper .e-frame.e-check, .e-css.e-checkbox-wrapper .e-frame.e-check 
+{ 
+    background-color : #1E48A4; 
+}

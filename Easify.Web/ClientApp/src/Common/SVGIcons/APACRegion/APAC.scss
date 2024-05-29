@@ -1,0 +1,27 @@
+$color: var(--background);
+$SelectedRegioncolor: var(--secondary);
+
+.apac-cls-1 {
+    fill: none;
+}
+
+.apac-cls-1, .apac-cls-2 {
+    stroke-width: 0px;
+}
+
+.apac-cls-2 {
+    fill: $color;
+}
+.card-selected {
+    .apac-cls-2 {
+        fill: $SelectedRegioncolor;
+    }
+}
+
+.apac-cls-3 {
+    opacity: .1;
+}
+
+.apac-cls-4 {
+    clip-path: url(#clippath);
+}

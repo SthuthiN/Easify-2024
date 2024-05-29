@@ -1,0 +1,75 @@
+﻿.custom-react-select {
+    position: absolute !important;
+    width: 25vh !important;
+
+    .css-1nmdiq5-menu {
+        z-index: 999999 !important;
+        position: absolute;
+    }
+
+    .css-tr4s17-option {
+        color: black;
+    }
+
+    .css-1nmdiq5-menu {
+        z-index: 999999 !important;
+    }
+
+    .disabled {
+        .css-13cymwt-control{
+
+        }
+    }
+
+    .css-1n6sfyn-MenuList {
+        max-height: 300px;
+        overflow-y: auto;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        box-sizing: border-box;
+        color: black;
+        font-size: small;
+        text-align: justify;
+    }
+
+    .css-1okebmr-indicatorSeparator {
+        display: none;
+    }
+
+    div {
+        cursor: pointer;
+    }
+
+    .css-g1d714-ValueContainer {
+        //height: 42px !important;
+    }
+
+    svg {
+        fill: rgba(96,94,92,0.5)
+    }
+
+    .show-error {
+        border: none !important;
+    }
+
+    .show-error > div:first-child {
+        border: 1px solid red;
+    }
+}
+
+    .show-dropdown-up {
+        .css-26l3qy-menu{
+            top:auto;
+            bottom:100%;
+        }
+    }
+
+    .show-dropdown-down div:last-child {
+        bottom:auto !important;
+    }
+
+.e-multi-select-list-wrapper{
+    display: inline-table;
+}

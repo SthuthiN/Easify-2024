@@ -1,0 +1,79 @@
+﻿:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    // Add more color variables as needed
+}
+
+
+.yellow {
+    display: block;
+    background-color: #fccf02;
+    border: 1px solid lightgray;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.green {
+    display: block;
+    background-color: #00d87e;
+    border: 1px solid lightgray;
+    height: 30px;
+    width: 30px;
+    cursor:pointer;
+}
+.cyan {
+    display: block;
+    background-color: #00e5fa;
+    border: 1px solid lightgray;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.blue {
+    display: block;
+    background-color: #1f00e1;
+    border: 1px solid lightgray;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.indigo {
+    display: block;
+    background-color: #7700ec;
+    border: 1px solid lightgray;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.pink {
+    display: block;
+    background-color: #ff00e1;
+    border: 1px solid lightgray;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.color{
+    height:20vh;
+    width:30vh;
+    border:1px solid black;
+    margin:2px;
+    background-color:var(--primary-color);
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+}
+
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+

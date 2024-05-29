@@ -1,0 +1,91 @@
+﻿.inventory-container 
+{ 
+    padding: 0px 36px; 
+    font-size: 14px;
+    font-family:Segoe UI;
+    background-color: white;
+
+    .top-section{
+        padding: 36px 0px 20px;
+        //background-color: #F2F5FA !important;
+    }
+
+    .lock-section{
+        padding: 0px;
+        margin-top: -39px;
+        //background-color: #F2F5FA !important;
+        .size-18
+        {
+            width:18px;
+            height:18px;
+        }
+    }
+
+    .create-new-btn , .create-new-btn:hover
+    { 
+        margin-left:5px;
+        background-color: orange; 
+        border: none; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        padding: 0px 14px; 
+        margin-top: 23px; 
+        float: right; 
+        color: white; 
+        font-weight: bold; 
+        outline: none;
+        height: 32px;
+        i, i:hover, i:active{
+            color: white;
+        }
+          
+    }
+}
+
+.cta-button, .cta-button:hover{
+    background-color: orange;
+    color: white;
+}
+
+
+    .export-btn, .export-btn:hover{
+        background-color: white;
+        color: orange;
+        border: 1px solid orange;
+        float: right;
+        margin-top: 23px;
+        border-radius: 4px;
+    }
+
+
+    .cursor-pointer{
+        cursor: pointer;
+    }
+    
+    .display-flex 
+    { 
+        display: inline-flex; 
+    }
+
+    .width-188{
+        width:188px;
+    }
+    .width-166{
+        width:166px;
+    }
+    .color-orange{
+        color:orange;
+    }
+    .is-disabled{
+        background-color:#ccc !important;
+        pointer-events:none;
+    }
+
+    .is-disabled-icon{
+        color:#ccc !important;
+        pointer-events:none;
+    }
+
+.ms-ContextualMenu{
+    min-width: 160px;
+}

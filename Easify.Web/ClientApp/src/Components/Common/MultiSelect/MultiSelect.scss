@@ -1,0 +1,541 @@
+﻿#dlrMultiDropDown {
+    z-index: 9999999999999999 !important;
+}
+
+.dlr-drop-down, #dlrMultiDropDown {
+
+    .popover-body {
+        padding: 0 !important;
+    }
+
+    flex: 0 0 97%;
+    max-width: 97%;
+    position: relative;
+
+    .btn-disable {
+        background-color: lightgrey !important;
+    }
+
+    .btn-dropdown {
+        border: 1px solid #c7c7c7;
+        background-color: white;
+        padding: 5px;
+        font-size: 14px;
+        width: 64%;
+        text-align: left;
+        position: relative;
+        border-radius: 5px;
+        color: #383838;
+        cursor: pointer;
+        outline: none;
+
+        .selected-opt {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 85% !important;
+        }
+
+        .drop-down-icon {
+            position: absolute;
+            right: 7px;
+            top: 4px;
+            color: #9a9a9a;
+        }
+
+        .close-icon {
+            position: absolute;
+            color: #9a9a9a;
+            right: 21px;
+            font-size: 20px;
+            font-family: monospace;
+            top: -2px;
+        }
+    }
+
+    .dropdown-list {
+        box-shadow: 0 0.5rem 1.5rem #a7a7a7;
+        position: absolute;
+        max-width: 450px;
+        /*top: 34px;*/
+        z-index: 100000000;
+        background-color: white;
+        width: 100%;
+        width: max-content;
+
+        .inp-search {
+            /*width: 95%;*/
+            border: none;
+            font-size: 14px;
+            border-bottom: 1px solid #dcdcdc;
+            padding: 8px 9px;
+            color: #616161;
+            outline: none;
+        }
+
+        .options {
+            width: 100%;
+
+            .select-all {
+                border: 1px solid #e4e2e2;
+            }
+
+            .chk-option {
+                padding: 8px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #e8e8e8;
+                }
+
+                .inp-check {
+                    width: 19px;
+                    height: 19px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .lbl-option {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 0px 7px 3px;
+                    font-size: 15px;
+                    color: black;
+                    border-bottom: 10px;
+                    font-family: 'Segoe UI Web (West European)','Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue',sans-serif;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: 80% !important;
+                }
+            }
+
+            .scroll {
+                overflow-y: auto;
+            }
+
+            .user-options {
+                max-height: 287px;
+
+                .no-content {
+                    padding: 11px 19px;
+                }
+            }
+        }
+
+        .no-content {
+            padding: 11px;
+        }
+    }
+}
+
+.supply-dropdown {
+    .dlr-drop-down {
+        max-width: 100%;
+
+        .btn-dropdown {
+            height: 27px !important;
+            justify-content: start !important;
+            width: 100%;
+
+            .drop-down-icon {
+                right: 7px !important;
+                top: 4px !important;
+            }
+
+            .close-icon {
+                display: none;
+            }
+        }
+    }
+}
+.inventory-dropdown-multiselect {
+    .dlr-drop-down {
+        max-width: 100%;
+
+        .btn-dropdown {
+            height: 27px !important;
+            justify-content: start !important;
+
+            .drop-down-icon {
+                right: 7px !important;
+                top: 4px !important;
+            }
+
+            .close-icon {
+                display: none;
+            }
+        }
+    }
+}
+
+#dlrMultiDropDown {
+    .dropdown-list {
+        width: 111px;
+
+        &.supply-full-screen {
+            width: 140px;
+        }
+
+        .inp-search {
+            width: 95%;
+        }
+
+        .options {
+            .chk-option {
+                padding: 5px;
+
+                .inp-check {
+                    width: 15px;
+                    height: 15px;
+                }
+
+                .lbl-option {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:601px) and (max-width:750px) {
+    .supply-dropdown {
+        .dlr-drop-down {
+            .btn-dropdown {
+                height: 22px !important;
+                width: 13.5vw !important;
+                font-size: 1.5vw;
+
+                .selected-opt {
+                    padding-top: 3px;
+                }
+
+                .close-icon {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    #dlrMultiDropDown {
+        .dropdown-list {
+            width: 13.5vw;
+
+            .inp-search {
+                font-size: 10px;
+                padding: 4px 6px;
+            }
+
+            .options {
+                .user-options {
+                    max-height: 115px;
+                }
+
+                .chk-option {
+                    padding: 3px;
+
+                    .inp-check {
+                        width: 12px;
+                        height: 12px;
+                    }
+
+                    .lbl-option {
+                        font-size: 9px;
+                        padding: 0px 3px 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:751px) and (max-width:1024px) {
+    .supply-dropdown {
+        .dlr-drop-down {
+            padding-top: 5px;
+
+            .btn-dropdown {
+                height: 24px !important;
+                width: 13.5vw !important;
+                font-size: 1.5vw;
+
+                .selected-opt {
+                    padding-top: 2px;
+                }
+
+                .close-icon {
+                    font-size: 14px;
+                    right: 26px;
+                    top: 0px;
+                }
+
+                .drop-down-icon {
+                    right: 7px !important;
+                    top: 2px !important;
+                }
+            }
+        }
+    }
+
+    #dlrMultiDropDown {
+        .dropdown-list {
+            width: 13.5vw;
+
+            .inp-search {
+                font-size: 12px;
+                padding: 4px 6px;
+            }
+
+            .options {
+                .user-options {
+                    max-height: 115px;
+                }
+
+                .chk-option {
+                    padding: 3px;
+
+                    .inp-check {
+                        width: 12px;
+                        height: 12px;
+                    }
+
+                    .lbl-option {
+                        font-size: 11px;
+                        padding: 0px 3px 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:751px) and (max-width:1024px) and (min-height:1100px) {
+    .supply-dropdown {
+        .dlr-drop-down {
+            padding-top: 0px;
+
+            .btn-dropdown {
+                height: 26px !important;
+            }
+        }
+    }
+}
+
+@media(min-width:1025px) and (max-width:1100px) {
+    .supply-dropdown {
+        &.supply-dropdown-fullscreen {
+            .dlr-drop-down {
+                .btn-dropdown {
+                    width: 100% !important;
+                }
+            }
+        }
+
+        .dlr-drop-down {
+            .btn-dropdown {
+                height: 20px !important;
+                padding: 3px;
+                font-size: 8px;
+
+
+                .close-icon {
+                    font-size: 13px;
+                    right: 11px;
+                }
+
+                .drop-down-icon {
+                    right: 2px !important;
+                }
+            }
+        }
+    }
+
+    #dlrMultiDropDown {
+        .dropdown-list {
+            width: 61px;
+
+            .inp-search {
+                font-size: 10px;
+                padding: 4px 4px;
+            }
+
+            .options {
+                .user-options {
+                    max-height: 135px;
+                }
+
+                .chk-option {
+                    padding: 2px;
+
+                    .inp-check {
+                        width: 10px;
+                        height: 10px;
+                    }
+
+                    .lbl-option {
+                        font-size: 9px;
+                        padding: 0px 2px 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:1101px) and (max-width:1300px) {
+    .supply-dropdown {
+        &.supply-dropdown-fullscreen {
+            .dlr-drop-down {
+                .btn-dropdown {
+                    width: 100% !important;
+                }
+            }
+        }
+
+        .dlr-drop-down {
+            .btn-dropdown {
+                height: 20px !important;
+                padding: 3px;
+                font-size: 8px;
+
+
+                .close-icon {
+                    font-size: 13px;
+                    right: 11px;
+                }
+
+                .drop-down-icon {
+                    right: 2px !important;
+                }
+            }
+        }
+    }
+
+    #dlrMultiDropDown {
+        .dropdown-list {
+            width: 70px;
+
+            .inp-search {
+                font-size: 10px;
+                padding: 4px 4px;
+            }
+
+            .options {
+                .user-options {
+                    max-height: 135px;
+                }
+
+                .chk-option {
+                    padding: 2px;
+
+                    .inp-check {
+                        width: 10px;
+                        height: 10px;
+                    }
+
+                    .lbl-option {
+                        font-size: 9px;
+                        padding: 0px 2px 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(min-width:1301px) and (max-width:1400px) {
+    .supply-dropdown {
+        .dlr-drop-down {
+            max-width: 87%;
+
+            .btn-dropdown {
+                height: 22px !important;
+                font-size: 9px;
+
+                .close-icon {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    #dlrMultiDropDown {
+        .dropdown-list {
+            width: 78px;
+
+            .inp-search {
+                font-size: 10px;
+                padding: 4px 6px;
+            }
+
+            .options {
+                .user-options {
+                    max-height: 137px;
+                }
+
+                .chk-option {
+                    padding: 3px;
+
+                    .inp-check {
+                        width: 11px;
+                        height: 11px;
+                    }
+
+                    .lbl-option {
+                        font-size: 10px;
+                        padding: 0px 2px 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:1401px) and (max-width:1919px) {
+    .supply-dropdown {
+        .dlr-drop-down {
+            max-width: 100%;
+
+            .btn-dropdown {
+                height: 22px !important;
+                font-size: 9px;
+
+                .close-icon {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    #dlrMultiDropDown {
+        .dropdown-list {
+            width: 90px;
+
+            .inp-search {
+                font-size: 10px;
+                padding: 4px 6px;
+            }
+
+            .options {
+                .user-options {
+                    max-height: 137px;
+                }
+
+                .chk-option {
+                    padding: 3px;
+
+                    .inp-check {
+                        width: 11px;
+                        height: 11px;
+                    }
+
+                    .lbl-option {
+                        font-size: 10px;
+                        padding: 0px 2px 2px;
+                    }
+                }
+            }
+        }
+    }
+}

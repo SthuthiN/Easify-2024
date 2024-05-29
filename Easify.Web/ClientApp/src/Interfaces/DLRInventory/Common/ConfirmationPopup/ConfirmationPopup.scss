@@ -1,0 +1,25 @@
+﻿.confirmation-popup-container {
+    min-height: 116px !important;
+    max-height: 200px !important;
+    max-width: 500px;
+    z-index:999;
+    .ms-Dialog-header {
+        display: none !important;
+    }
+
+    .ms-Dialog-inner {
+        padding: 24px !important;
+    }
+
+    .ms-Dialog-content {
+        font-size: 18px !important;
+    }
+
+    .ms-Dialog-actions {
+        padding-top: 8px !important;
+
+        .ms-Dialog-actionsRight {
+            text-align: right !important;
+        }
+    }
+}

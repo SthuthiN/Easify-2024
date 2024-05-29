@@ -1,0 +1,31 @@
+$color: var(--background);
+#mw-left-icon {
+    .cls-1 {
+        font-family: Arial-BoldMT, Arial;
+        font-size: 14.24px;
+        font-weight: 700;
+    }
+
+    .cls-1, .cls-2 {
+        fill: $color;
+    }
+
+    .cls-2, .cls-3 {
+        stroke-width: 0px;
+    }
+
+    .cls-4 {
+        stroke-linecap: round;
+        stroke-width: 2px;
+    }
+
+    .cls-4, .cls-5 {
+        fill: none;
+        stroke: $color;
+        stroke-miterlimit: 10;
+    }
+
+    .cls-3 {
+        fill: $color;
+    }
+}

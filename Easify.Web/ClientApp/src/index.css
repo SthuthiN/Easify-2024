@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.border-error {
+    border: 1px solid red !important;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.required {
+    color: red !important;
+}
+
+#confirmation-popup {
+    max-width: 600px !important;
+    position: relative !important;
+    top: 32% !important;
+}
+
+.disabled {
+    background-color: #F8F8F9 !important;
+}
+
+.color-green {
+    color: #84B854 !important
+}
+
+.color-red {
+    color: #E94C1A !important
+}
+
+.color-yellow {
+    color: #FDBD40 !important
+}
+
+@media (min-width: 1200px) {
+    #addDonation.modal-xl {
+        max-width: 1300px !important;
+    }
+}
+
+.donation-navigate {
+    color: #3173d5 !important;
+    cursor: pointer;
+}

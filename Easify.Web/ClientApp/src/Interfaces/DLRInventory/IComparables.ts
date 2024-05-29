@@ -1,0 +1,31 @@
+﻿export interface IComparables {
+    ID: number;
+    Source?: string;
+    SignQuarter?: string;
+    Region: string;
+    Market: string;
+    Provider?: string;
+    Address?: string;
+    ProductType?: string;
+    QuarterID?: number;
+    Redundancy?: string;
+    NRSF: number;
+    KW: number;
+    Customer?: string;
+    TermInMonths: number;
+    AnnualGAAPRent: number;
+    StartingLeaseRate: number;
+    AverageLeaseRate: number;
+    TotalFreeRent: number;
+    TotalTI: number;
+    NetRent: number;
+    Escalations: number;
+    RSF: number;
+    DateModified?: Date;
+    ModifiedBy?: string;
+    IsActive?: boolean;
+    IsNew?: boolean;
+    DateCreated?: Date;
+    IsModified?: boolean;
+    IsValidRecord?: boolean;
+}

@@ -1,0 +1,130 @@
+﻿.dlr-single-drop-down {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+
+    .btn-disable {
+        background-color: #F8F8F9 !important;
+    }
+
+    .btn-dropdown {
+        border: 1px solid rgb(204, 204, 204);
+        background-color: white;
+        font-size: 14px;
+        width: 100%;
+        text-align: left;
+        position: relative;
+        border-radius: 5px;
+        color: #383838;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+
+        .inp-search {
+            width: 85%;
+            border: none;
+            font-size: 14px;
+            padding: 0px 9px;
+            color: #616161;
+            outline: none;
+            border-radius: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: -webkit-fill-available;
+            flex-basis: 0;
+            flex-grow: 1;
+
+            span {
+                position: absolute;
+                top: 50%;
+                transform: translate(0%, -50%);
+            }
+        }
+
+        .drop-down-icon-con {
+            display: inline-block;
+            width: 15%;
+            position: relative;
+
+            .drop-down-icon {
+                color: #9a9a9a;
+                vertical-align: -webkit-baseline-middle;
+                position: absolute;
+                top: 4px;
+                right: 7px;
+
+                svg {
+                    position: relative;
+                    color: rgb(153, 153, 153);
+                    fill: rgba(96, 94, 92, 0.5);
+                }
+            }
+        }
+    }
+}
+
+#dlrSingleDropDown {
+    z-index: 99999999999 !important;
+
+    .popover-body {
+        padding: 0 !important;
+    }
+
+    .dropdown-list {
+        box-shadow: 0 0.5rem 1.5rem #a7a7a7;
+        max-width: 450px;
+        z-index: 100000000;
+        background-color: #fdfdfd;
+        border-radius: 6px;
+        border: 1px solid #b5afaf;
+
+        .options {
+            width: 100%;
+            border-radius: 6px;
+
+            .lbl-option {
+                display: block;
+                vertical-align: middle;
+                font-size: 15px;
+                color: black;
+                border-bottom: 10px;
+                font-family: 'Segoe UI Web (West European)','Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue',sans-serif;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding: 8px;
+                cursor: pointer;
+                max-width: 450px !important;
+
+                &:hover {
+                    background-color: #d8e0f3;
+                }
+            }
+
+            .active {
+                color: white !important;
+                background-color: #387EDE !important;
+            }
+
+            .scroll {
+                overflow-y: auto;
+            }
+
+            .user-options {
+                max-height: 287px;
+                padding: 5px 0px;
+
+                .no-content {
+                    padding: 11px 19px;
+                }
+            }
+        }
+
+        .no-content {
+            padding: 11px;
+            text-align: center;
+            color: #9b9b9b;
+        }
+    }
+}

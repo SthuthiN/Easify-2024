@@ -1,0 +1,29 @@
+﻿.spinner-container {
+    //position: absolute;
+    display: block;
+    position: fixed;
+    z-index: 8999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .ms-Spinner {
+        width: 100%;
+        height: 100%;
+        z-index: 8000;
+        background: radial-gradient(rgba(20, 20, 20,.8), rgba(0, 0, 0, .8));
+        background: -webkit-radial-gradient(rgba(20, 20, 20,.8), rgba(0, 0, 0,.8));
+    }
+
+    .ms-Spinner-circle {
+        width: 40px !important;
+        height: 40px !important;
+        border: 3.5px solid #c7e0f4;
+        border-top-color: #0078d7;
+        /*margin-top: 22%;
+        margin-left: 50%;*/
+        opacity: 1;
+        background-color: transparent;
+    }
+}

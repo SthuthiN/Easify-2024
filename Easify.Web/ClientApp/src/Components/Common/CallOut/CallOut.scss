@@ -1,0 +1,176 @@
+$color: var(--background);
+
+.selected-theme {
+    background-color: $color;
+    width: 2.2vw;
+    border-radius: 50%;
+    height: 2.2vw;
+    position: relative;
+
+    .theme-icon {
+        position: absolute;
+        left: -2px;
+        top: -2px;
+    }
+
+    
+}
+.select-theme {
+    border: 2px solid darkgrey;
+}
+.themes {
+    padding: 8px;
+    /*flex-wrap: wrap;
+    width: 204px;
+    height: auto;*/
+
+
+
+    .color-box {
+        height: 20px;
+        width: 20px;
+    }
+
+    .Default {
+        background-color: #00454f;
+    }
+
+    .Yellow {
+        background-color: #ffdc4a;
+        }
+
+        .Black {
+            background-color: #000000;
+        }
+
+        .Green {
+            background-color: #51b476;
+        }
+
+        .LightBlue {
+            background-color: #61c4df;
+        }
+
+        .DarkBlue {
+            background-color: #304596;
+        }
+
+        .Violet {
+            background-color: #b44e97;
+        }
+
+        .Indigo {
+            background-color: #564394;
+        }
+    }
+
+    @media (max-width:1366px) {
+        .selected-theme {
+            height: 35px;
+            width: 35px;
+
+            .theme-icon {
+                left: -1px;
+                top: -1px;
+            }
+        }
+    }
+
+    @media(max-width:1536px) and (min-width : 1400px) {
+        .selected-theme {
+            width: 37px;
+            height: 37px;
+
+            .theme-icon {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+
+    @media (min-width:992px) and (max-width:1100px) {
+        .selected-theme {
+            width: 25px;
+            height: 24px;
+        }
+
+        .theme-icon {
+            height: 25px !important;
+            width: 26px !important;
+        }
+    }
+@media(min-width:601px) and (max-width:1024px) {
+
+    .theme-icon {
+        height: 38px !important;
+        width: 38px !important;
+    }
+
+    .selected-theme {
+        height: 31px !important;
+        width: 32px !important;
+    }
+}
+    /*@media(min-width:768px) and (max-width:991px) and (min-height:600px) and (max-height:690px) {
+        .selected-theme {
+            height: 4.8vh;
+            width: 3.6vw;
+        }
+
+        .theme-icon {
+            height: 5.5vh;
+            width: 4vw;
+            cursor: pointer;
+        }
+    }
+
+    @media(min-width:768px) and (max-width:991px) and (min-height:691px) and (max-height:767px) {
+        .selected-theme {
+            height: 4.4vh;
+            width: 4vw;
+        }
+
+        .theme-icon {
+            height: 5vh;
+            width: 4.4vw;
+            cursor: pointer;
+        }
+    }
+
+    @media(min-width:768px) and (max-width:991px) and (min-height:768px) and (max-height:1000px) {
+        .selected-theme {
+            height: 4.4vh;
+            width: 4vw;
+        }
+
+        .theme-icon {
+            height: 4.4vh;
+            width: 4.4vw;
+            cursor: pointer;
+        }
+    }
+
+    @media(min-width:768px) and (max-width:991px) and (min-height:950px) and (max-height:1080px) {
+        .selected-theme {
+            height: 4vh;
+            width: 4.5vw;
+        }
+
+        .theme-icon {
+            height: 4.5vh;
+            width: 5vw;
+            cursor: pointer;
+        }
+    }*/
+
+    /*@media(min-width:992px) and (max-width:1024px) {
+        .theme-icon {
+            height: 4vh !important;
+            width: 3.7vw !important;
+        }
+
+        .selected-theme {
+            width: 3.5vw;
+            height: 4vh;
+        }
+    }*/

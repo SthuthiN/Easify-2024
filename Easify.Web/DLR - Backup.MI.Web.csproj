@@ -1,0 +1,337 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper.FluentMap" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.8" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.20.0" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.5.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NLog.Appsettings.Standard" Version="2.1.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.14.0" />
+    <PackageReference Include="RepoDb" Version="1.12.7" />
+    <PackageReference Include="RepoDb.SqlServer" Version="1.1.3" />
+    <PackageReference Include="RepoDb.SqlServer.BulkOperations" Version="1.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\.vs\**" />
+    <Compile Remove="ClientApp\src\Components\Donations\**" />
+    <Compile Remove="ClientApp\src\Components\Reports\**" />
+    <Compile Remove="ClientApp\src\Interfaces\Dashboard\NewFolder\**" />
+    <Compile Remove="ClientApp\src\Pages\**" />
+    <Compile Remove="Properties\PublishProfiles\**" />
+    <Compile Remove="Properties\ServiceDependencies\**" />
+    <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\.vs\**" />
+    <Content Remove="ClientApp\src\Components\Donations\**" />
+    <Content Remove="ClientApp\src\Components\Reports\**" />
+    <Content Remove="ClientApp\src\Interfaces\Dashboard\NewFolder\**" />
+    <Content Remove="ClientApp\src\Pages\**" />
+    <Content Remove="Properties\PublishProfiles\**" />
+    <Content Remove="Properties\ServiceDependencies\**" />
+    <EmbeddedResource Remove="ClientApp\.vs\**" />
+    <EmbeddedResource Remove="ClientApp\src\Components\Donations\**" />
+    <EmbeddedResource Remove="ClientApp\src\Components\Reports\**" />
+    <EmbeddedResource Remove="ClientApp\src\Interfaces\Dashboard\NewFolder\**" />
+    <EmbeddedResource Remove="ClientApp\src\Pages\**" />
+    <EmbeddedResource Remove="Properties\PublishProfiles\**" />
+    <EmbeddedResource Remove="Properties\ServiceDependencies\**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\.vs\**" />
+    <None Remove="ClientApp\src\Components\Donations\**" />
+    <None Remove="ClientApp\src\Components\Reports\**" />
+    <None Remove="ClientApp\src\Interfaces\Dashboard\NewFolder\**" />
+    <None Remove="ClientApp\src\Pages\**" />
+    <None Remove="Properties\PublishProfiles\**" />
+    <None Remove="Properties\ServiceDependencies\**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Remove="ClientApp\.vs\**" />
+    <TypeScriptCompile Remove="ClientApp\node_modules\**" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Donations\**" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Reports\**" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Dashboard\NewFolder\**" />
+    <TypeScriptCompile Remove="Properties\PublishProfiles\**" />
+    <TypeScriptCompile Remove="Properties\ServiceDependencies\**" />
+    <_WebToolingArtifacts Remove="Properties\PublishProfiles\**" />
+    <_WebToolingArtifacts Remove="Properties\ServiceDependencies\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\.vs\ClientApp\project-colors.json" />
+    <None Remove="ClientApp\.vs\ClientApp\v17\.suo" />
+    <None Remove="ClientApp\.vs\slnx.sqlite" />
+    <None Remove="ClientApp\.vs\VSWorkspaceState.json" />
+    <None Remove="ClientApp\src\Common\ComponentRoute.ts" />
+    <None Remove="ClientApp\src\Common\Enums.ts" />
+    <None Remove="ClientApp\src\Components\Approvals\Approvals.tsx" />
+    <None Remove="ClientApp\src\Components\ApproverGroups\AddApproverGroup\AddApproverGroup.tsx" />
+    <None Remove="ClientApp\src\Components\ApproverGroups\ApproverGroups.tsx" />
+    <None Remove="ClientApp\src\Common\NotificationStyles.scss" />
+    <None Remove="ClientApp\src\Components\Configurations\Configurations.tsx" />
+    <None Remove="ClientApp\src\Components\Common\Header\dlr_logo.png" />
+    <None Remove="ClientApp\src\Components\Common\Header\Header.scss" />
+    <None Remove="ClientApp\src\Components\Common\Header\Header.tsx" />
+    <None Remove="ClientApp\src\Components\Configurations\Sidebar\Sidebar.tsx" />
+    <None Remove="ClientApp\src\Components\Dashboard\Report\MarketOverview\Supply\Supply.tsx" />
+    <None Remove="ClientApp\src\Components\StatusIcon.tsx" />
+    <None Remove="ClientApp\src\Interfaces\APIRoute.ts" />
+    <None Remove="ClientApp\src\Interfaces\Common\APIRoute.ts" />
+    <None Remove="ClientApp\src\Interfaces\Common\IAudit.ts" />
+    <None Remove="ClientApp\src\Interfaces\Common\IUserContext.ts" />
+    <None Remove="ClientApp\src\Interfaces\Configurations\IUserDashboardFilters.ts" />
+    <None Remove="ClientApp\src\Interfaces\Constants.ts" />
+    <None Remove="ClientApp\src\Interfaces\Dashboard.ts" />
+    <None Remove="ClientApp\src\Interfaces\IAccessRole.ts" />
+    <None Remove="ClientApp\src\Interfaces\Dashboard\IMarket.ts" />
+    <None Remove="ClientApp\src\Services\CommentsService.ts" />
+    <None Remove="ClientApp\src\Services\ConfigurationService.ts" />
+    <None Remove="ClientApp\src\Services\HttpService.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Remove="ClientApp\src\Assets\FooterLinks\MIDDisabledIcon\MIDDisabledIcon.tsx" />
+    <TypeScriptCompile Remove="clientapp\src\common\MockData.ts" />
+    <TypeScriptCompile Remove="clientapp\src\common\PPT.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Common\SVGIcons\MIDLogo\Logo.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Common\SVGIcons\NewFolder\BackIcon.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\App\ProtectedRoute.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\App\Router\Router.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Common\ColorPicker\ColorPicker.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Common\DatePicker\DatePicker.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Common\MultiSelect\Pagination\Pagination.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Common\NewFolder\BookmarkDropdown.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Common\Table\Table.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\DocumentViewer.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Filter.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Filters\FiltersComponent.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Footer\FooterComponent.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Form\Form.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Form\Supply.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Report.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Report\Common\NewFolder\BarChart.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Report\Common\PieChart\PieChart.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Report\Common\Table\Table.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Report\DataTable\DataTable.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Report\DataTable\SPCapability\SPCapability.tsx" />
+    <TypeScriptCompile Remove="clientapp\src\components\dashboard\report\marketactivities\MarketActivities.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Report\MarketOverview\SPCapability\SPCapability.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Report\MarketOverview\SPCapability\SPCapabilityTable.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Report\MarketOverview\Supply\TopCompetitorInventory.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\Dashboard\Report\ReportModal\ReportModal.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Components\AccessDenied\AccessDenided.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Common\IBookmark.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Common\IColor.ts" />
+    <TypeScriptCompile Remove="clientapp\src\interfaces\common\INavigationResources.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Common\IPieChart.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Common\IUserSettings.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Dashboard\IBusinessRegion.ts" />
+    <TypeScriptCompile Remove="clientapp\src\interfaces\dashboard\ICity.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Dashboard\ICountry.ts" />
+    <TypeScriptCompile Remove="clientapp\src\interfaces\dashboard\IDocument.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Dashboard\IEmail.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Dashboard\IFooterLink.ts" />
+    <TypeScriptCompile Remove="clientapp\src\interfaces\dashboard\IRegion.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Dashboard\Report\DataTableAll\ISPCapability.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Dashboard\Report\DataTableAll\ISupply.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Dashboard\Report\IMarketViewCapabilityData.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Dashboard\Report\IMarketViewSupplyData.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Dashboard\Report\IState.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\Dashboard\Report\MarketOverview\ITopCompetitorInventory.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\IConfigurationResource.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Interfaces\IPaginationItem.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Services\UserSettingsService.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\Theme\Enums.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Theme\Model.tsx" />
+    <TypeScriptCompile Remove="ClientApp\src\Theme\ThemeConfig.tsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ClientApp\src\Components\Common\Header\Header.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DLR.MI.Concerns\DLR.MI.Concerns.csproj" />
+    <ProjectReference Include="..\DLR.MI.Contracts\DLR.MI.Contracts.csproj" />
+    <ProjectReference Include="..\DLR.MI.Providers\DLR.MI.Providers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\Common\NotificationStyles.scss" />
+    <TypeScriptCompile Include="ClientApp\src\Interfaces\Common\IUploadFile.ts" />
+    <TypeScriptCompile Include="ClientApp\src\Interfaces\Dashboard.ts" />
+    <TypeScriptCompile Include="ClientApp\src\Services\DashboardService.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="QtBinariesWindows\icudt49.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\icuin49.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\icuuc49.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\imageformats\qdds.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\imageformats\qgif.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\imageformats\qicns.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\imageformats\qico.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\imageformats\qjp2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\imageformats\qjpeg.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\imageformats\qmng.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\imageformats\qsvg.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\imageformats\qtga.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\imageformats\qtiff.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\imageformats\qwbmp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\imageformats\qwebp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\libEGL.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\libGLESv2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\platforms\qminimal.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\platforms\qoffscreen.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\platforms\qwindows.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5Core.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5Gui.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5Multimedia.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5MultimediaWidgets.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5Network.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5OpenGL.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5Positioning.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5PrintSupport.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5Qml.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5Quick.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5Sensors.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5Sql.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5Svg.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5WebChannel.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5WebKit.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5WebKitWidgets.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Qt5Widgets.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\Syncfusion.WebKitWrapper">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="QtBinariesWindows\zlib1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\Components\Configurations\Users\" />
+    <Folder Include="ClientApp\src\Components\AccessDenied\" />
+    <Folder Include="ClientApp\src\Interfaces\DLRInventory\" />
+    <Folder Include="ClientApp\src\Components\Dashboard\Report\MarketActivities\" />
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <!--<Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />-->
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)build\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>

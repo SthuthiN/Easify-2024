@@ -1,0 +1,11 @@
+﻿.error-unauthorized {
+    background-color: #D73252;
+    color: #FFE8EF;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+
+    .error-symbol, .error-text {
+        display: inline-block;
+    }
+}

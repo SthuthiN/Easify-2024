@@ -1,0 +1,181 @@
+﻿.form-modal-container {
+    height: 700px !important;
+    width: 600px !important;
+    min-width: unset;
+    max-width: unset;
+    min-height: unset;
+    max-height: unset;
+    z-index: 999;
+    border-top: 4px solid #1E48A4;
+
+    .ms-Modal-scrollableContent {
+        max-height: none !important;
+    }
+
+    .ms-Dialog-button {
+        display: none;
+    }
+
+    h4 {
+        padding: 16px;
+    }
+
+    .form-container {
+        font-size: 14px;
+        color: black;
+        min-height: 400px;
+        max-height: 560px;
+        overflow-y: scroll;
+        padding: 12px 20px 8px 20px;
+
+        .display-inline-flex {
+            display: inline-flex;
+        }
+
+        .required-field {
+            color: red !important;
+        }
+
+        .show-error {
+            border: 1px solid red;
+        }
+
+        input {
+            outline: none !important;
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 4px;
+        }
+
+        .ms-TextField--multiline {
+            padding: 0px !important;
+            outline: none !important;
+        }
+
+        .ms-TextField-fieldGroup {
+            outline: none !important;
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 4px;
+        }
+
+        .date-picker {
+            input {
+                outline: none !important;
+                border: 1px solid rgb(204, 204, 204);
+                border-radius: 4px;
+                padding: 18px 6px;
+            }
+
+            .ms-DatePicker {
+                outline: none !important;
+                border: 1px solid #cccccc;
+                border-radius: 4px;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+            .ms-TextField-field {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+            .ms-TextField-fieldGroup {
+                outline: none !important;
+                border: none !important;
+                height: 38px !important;
+
+                i {
+                    padding: 10px 8px;
+                }
+            }
+
+            .show-error {
+                border: 1px solid red !important;
+                border-radius: 4px;
+            }
+        }
+
+        .chk-group {
+            .chk-control {
+
+                label {
+                    margin: 0px !important;
+                }
+
+                .ms-Checkbox-checkbox {
+                    border: 1px solid rgb(204, 204, 204) !important;
+                }
+
+                .checkbox-110 {
+                    background-color: #1E48A4;
+                }
+            }
+
+            label {
+                margin: 0px;
+            }
+        }
+    }
+
+    .form-footer {
+        padding: 16px 44px 16px 16px;
+        float: right;
+
+        .form-footer-btn {
+            background-color: orange;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 6px 20px;
+            color: white;
+            font-weight: bold;
+            outline: none;
+            min-width: 86px;
+        }
+
+        .cancel-btn {
+            background-color: white !important;
+            color: #9a9a9a;
+            border: 1px solid #ccc;
+        }
+    }
+}
+
+.form-modal-competitor-inventory-container {
+    height: 580px !important;
+
+    .form-container {
+        max-height: 444px !important;
+    }
+}
+
+@media only screen and (max-width: 1367px) {
+    .form-modal-container {
+        height: 600px !important;
+        width: 600px !important;
+
+        .form-container {
+            max-height: 462px;
+        }
+    }
+}
+
+.form-modal-container ::-webkit-scrollbar {
+    width: 10px;
+}
+
+// Track
+.form-modal-container ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+// Handle
+.form-modal-container ::-webkit-scrollbar-thumb {
+    background: #888;
+    border: 1px solid #888;
+    border-radius: 8px;
+    min-height: 40px;
+}
+// Handle on hover
+.form-modal-container ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

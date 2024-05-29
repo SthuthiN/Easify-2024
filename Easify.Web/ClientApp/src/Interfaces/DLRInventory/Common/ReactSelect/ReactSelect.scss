@@ -1,0 +1,48 @@
+﻿.custom-react-select 
+{
+    .css-1okebmr-indicatorSeparator 
+    { 
+        display: none; 
+    }
+
+    div 
+    { 
+        cursor: pointer; 
+    }
+
+    .css-g1d714-ValueContainer 
+    { 
+        //height: 42px !important;
+    }
+
+    svg 
+    {   
+        fill: rgba(96,94,92,0.5) 
+    }
+
+    .show-error 
+    { 
+        border: none !important; 
+    }
+
+    .show-error > div:first-child 
+    { 
+        border: 1px solid red; 
+    }
+
+}
+
+    .show-dropdown-up {
+        .css-26l3qy-menu{
+            top:auto;
+            bottom:100%;
+        }
+    }
+
+    .show-dropdown-down div:last-child {
+        bottom:auto !important;
+    }
+
+.e-multi-select-list-wrapper{
+    display: inline-table;
+}

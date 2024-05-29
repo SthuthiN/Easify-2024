@@ -1,0 +1,27 @@
+$color: var(--background);
+$SelectedRegioncolor: var(--secondary);
+
+.eme-cls-1 {
+    fill: none;
+}
+
+.eme-cls-1, .eme-cls-2 {
+    stroke-width: 0px;
+}
+
+.eme-cls-2 {
+    fill: $color;
+}
+.card-selected {
+    .eme-cls-2 {
+        fill: $SelectedRegioncolor;
+    }
+}
+
+.eme-cls-3 {
+    opacity: .1;
+}
+
+.eme-cls-4 {
+    clip-path: url(#clippath);
+}

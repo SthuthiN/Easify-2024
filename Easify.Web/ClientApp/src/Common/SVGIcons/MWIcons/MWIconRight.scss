@@ -1,0 +1,28 @@
+$color: var(--background);
+#mw-right-icon {
+    .MW-cls-1 {
+        font-family: Arial-BoldMT, Arial;
+        font-size: 14.24px;
+        font-weight: 700;
+    }
+
+    .MW-cls-1, .MW-cls-2 {
+        fill: $color;
+    }
+
+    .MW-cls-2 {
+        stroke-width: 0px;
+    }
+
+    .MW-cls-3, .MW-cls-4 {
+        fill: none;
+        stroke: $color;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+    }
+
+    .MW-cls-4 {
+        stroke-linecap: round;
+    }
+}
+

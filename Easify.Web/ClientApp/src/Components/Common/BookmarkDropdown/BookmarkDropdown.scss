@@ -1,0 +1,242 @@
+﻿$color: var(--background);
+$hover: var(--transparent);
+
+.bookmark-select {
+    position: absolute;
+    width: 15vw;
+    z-index: 999;
+    right: 11vw;
+
+    .css-13cymwt-control {
+        border-radius: 0 !important;
+        border-color: none !important;
+
+        &:focus {
+            outline: none !important;
+            border-color: none !important;
+        }
+    }
+
+    .css-t3ipsp-control {
+        border-color: none !important;
+        box-shadow: none !important;
+
+        &:hover {
+            border-color: hsl(0, 0%, 80%) !important;
+        }
+    }
+
+    .css-10wo9uf-option {
+        font-size: small;
+        text-align: justify;
+        /*        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;*/
+        text-wrap: nowrap;
+    }
+
+    .css-1nmdiq5-menu {
+        margin: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .css-d7l1ni-option {
+        font-size: small;
+        text-align: justify;
+        /*        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;*/
+        text-wrap: nowrap;
+    }
+
+    .css-1n6sfyn-MenuList {
+        max-height: 300px;
+        overflow-y: auto;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        box-sizing: border-box;
+        color: black;
+        width: 100%;
+        display: inline-grid;
+
+        div {
+            background-color: unset;
+        }
+
+        div:hover {
+            background-color: $hover;
+        }
+    }
+
+
+
+    .css-qr46ko {
+        max-height: 300px;
+        overflow-y: auto;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        box-sizing: border-box;
+        color: black;
+        font-size: small;
+        text-align: justify;
+        width: 100%;
+        display: inline-grid;
+
+        div {
+            background-color: unset;
+        }
+
+        div:hover {
+            background-color: $hover;
+        }
+    }
+
+    .css-1okebmr-indicatorSeparator {
+        display: none;
+    }
+
+    div {
+        cursor: pointer;
+    }
+
+    .css-1jqq78o-placeholder {
+        font-size: 15px !important;
+        text-align: start !important;
+    }
+
+    .css-g1d714-ValueContainer {
+        //height: 42px !important;
+    }
+
+    .bookmark {
+        cursor: pointer;
+        fill: $color !important;
+    }
+
+    .saved-bookmark {
+        cursor: pointer;
+        fill: $color !important;
+    }
+
+    .show-error {
+        border: none !important;
+    }
+
+    .show-error > div:first-child {
+        border: 1px solid red;
+    }
+}
+
+.show-dropdown-up {
+    .css-26l3qy-menu {
+        top: auto;
+        bottom: 100%;
+    }
+}
+
+.show-dropdown-down div:last-child {
+    bottom: auto !important;
+}
+
+.e-multi-select-list-wrapper {
+    display: inline-table;
+}
+
+@media screen and (min-width:1000px) and (max-width:1366px) {
+    .bookmark-select {
+        right: 10vw !important;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .bookmark-select {
+        width: 75vw
+    }
+
+    .bookmark {
+        cursor: pointer;
+    }
+
+    .saved-bookmark {
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:991px) {
+    .bookmark-select {
+        width: 37vw;
+        right: 29vw;
+
+        .css-10wo9uf-option {
+            font-size: 1.2vw;
+        }
+    }
+
+    .bookmark {
+        cursor: pointer;
+    }
+
+    .saved-bookmark {
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width:751px) and (max-width:991px) {
+    .bookmark-select {
+        width: 37vw;
+        right: 25vw !important;
+
+        .css-10wo9uf-option {
+            font-size: 1.2vw;
+        }
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1024px) {
+    .bookmark-select {
+        width: 33vw;
+        right: 24vw !important;
+
+        .css-10wo9uf-option {
+            font-size: 1.2vw;
+        }
+    }
+}
+
+@media(min-width:601px) and (max-width:1024px) and (max-height:599px) {
+    .bookmark-select {
+        .css-1jqq78o-placeholder {
+            font-size: 1.5vw !important;
+        }
+    }
+}
+/*@media(min-width:601px) and (max-width:1024px) {
+    .css-b62m3t-container {
+        width: 22vw !important;
+    }
+
+    .bookmark-select {
+        .css-10wo9uf-option {
+            font-size: 1.2vw;
+        }
+    }
+}*/
+/*@media(min-width:768px) and (max-width:991px) and (min-height:600px){
+    .bookmark-select {
+        width: 24vw;
+        right: 18vw;
+    }
+}
+@media(min-width:768px) and (max-width:991px) and (min-height:950px) and (max-height:1080px){
+    .css-b62m3t-container {
+        width: 35vw !important;
+    }
+    .bookmark-select {
+        width: 29vw;
+        right: 18vw;
+    }
+}*/

@@ -1,0 +1,28 @@
+
+$color: var(--background);
+$SelectedRegioncolor: var(--secondary);
+.latam-cls-1 {
+    fill: none;
+}
+
+.latam-cls-1, .latam-cls-2 {
+    stroke-width: 0px;
+}
+
+.latam-cls-2 {
+    fill: $color;
+}
+.card-selected {
+    .latam-cls-2 {
+        fill: $SelectedRegioncolor;
+    }
+}
+
+
+.latam-cls-3 {
+    opacity: .1;
+}
+
+.latam-cls-4 {
+    clip-path: url(#clippath);
+}

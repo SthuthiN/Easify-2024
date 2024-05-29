@@ -1,0 +1,49 @@
+﻿.import-excel-container
+{
+    padding: 36px; 
+
+    .action-btn{
+        background-color: white; 
+        border: 1px solid orange; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        padding: 0px 14px;
+        float: right; 
+        color: orange; 
+        font-weight: bold; 
+        outline: none;
+        margin-left:5px;
+    }
+
+    .btn-fill{
+        background-color: orange !important; 
+        color: white !important; 
+        border: none !important;
+    }
+
+    .upload-btn{        
+        background-color: orange; 
+        color: white; 
+        border-radius: 4px; 
+    }
+
+    .color-red{
+        color:red;
+    }
+
+    .display-inline-flex{
+        display: inline-flex;
+    }
+
+    .float-right{
+        float: right;
+    }
+
+    .required-field{
+        color: red;
+    }
+
+    .visibility-hidden{
+        visibility:hidden;
+    }
+}
