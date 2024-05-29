@@ -1,0 +1,50 @@
+﻿CREATE Procedure [dbo].[DumpToMainCompetitorInventory]
+as
+BEGIN
+
+INSERT INTO [dbo].[CompetitorInventory]
+           ([Region]
+           ,[Company]
+           ,[Address]
+           ,[QuarterID]
+           ,[Market]
+           ,[Suite]
+           ,[ProductType]
+           ,[SF]
+           ,[IT Load(MW)]
+           ,[Suite Condition]
+           ,[IT Load (kW)]
+           ,[Date Avail]
+           ,[DateCreated]
+           ,[DateModified]
+           ,[ModifiedBy]
+           ,[IsActive]
+           ,[IsNew]
+           ,[Provider]
+           ,[Quarter Avail]
+           ,[Source]
+           ,[IsDeleted])
+	SELECT [Region]
+           ,[Company]
+           ,[Address]
+           ,[QuarterID]
+           ,[Market]
+           ,[Suite]
+           ,[ProductType]
+           ,[SF]
+           ,[ITLoadMW]
+           ,[SuiteCondition]
+           ,[ITLoadKW]
+           ,[DateAvailable]
+           ,[DateModified]
+           ,[DateModified]
+           ,[ModifiedBy]
+           ,1
+           ,0
+           ,[Provider]
+           ,[QuarterAvailable]
+           ,[Source]
+           ,0
+		From [dbo].[TempImportCompetitorInventory]
+	select 1 as Response
+END

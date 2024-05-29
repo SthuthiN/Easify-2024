@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DLR.MI.DBSchema</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{de705d4a-268c-47c8-8e26-2b51dae916ca}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DLR.MI.DBSchema</RootNamespace>
+    <AssemblyName>DLR.MI.DBSchema</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\WaterCooling.sql" />
+    <Build Include="dbo\Tables\UserAccessRoles.sql" />
+    <Build Include="dbo\Tables\TempImportOpportunity.sql" />
+    <Build Include="dbo\Tables\TempImportDLRInventory.sql" />
+    <Build Include="dbo\Tables\TempImportCompetitorInventory.sql" />
+    <Build Include="dbo\Tables\TempImportComparables.sql" />
+    <Build Include="dbo\Tables\TargetProductSize.sql" />
+    <Build Include="dbo\Tables\SuiteCondition.sql" />
+    <Build Include="dbo\Tables\Stage.sql" />
+    <Build Include="dbo\Tables\SmartHands.sql" />
+    <Build Include="dbo\Tables\SecurePerimeter.sql" />
+    <Build Include="dbo\Tables\SDRating.sql" />
+    <Build Include="dbo\Tables\ResponsibleParty.sql" />
+    <Build Include="dbo\Tables\Region.sql" />
+    <Build Include="dbo\Tables\Redundancy.sql" />
+    <Build Include="dbo\Tables\Quarter.sql" />
+    <Build Include="dbo\Tables\Property.sql" />
+    <Build Include="dbo\Tables\ProductType.sql" />
+    <Build Include="dbo\Tables\OpportunityModifications.sql" />
+    <Build Include="dbo\Tables\Opportunity.sql" />
+    <Build Include="dbo\Tables\NetworkDensity.sql" />
+    <Build Include="dbo\Tables\MarketIntelligenceConfiguration.sql" />
+    <Build Include="dbo\Tables\Market.sql" />
+    <Build Include="dbo\Tables\LogHistory.sql" />
+    <Build Include="dbo\Tables\IndustryOrComplianceCertifications.sql" />
+    <Build Include="dbo\Tables\FooterLink.sql" />
+    <Build Include="dbo\Tables\EmployeeDetails.sql" />
+    <Build Include="dbo\Tables\Employee Details Bkp 19-10-2023.sql" />
+    <Build Include="dbo\Tables\DLRInventoryModifications.sql" />
+    <Build Include="dbo\Tables\DLRInventory.sql" />
+    <Build Include="dbo\Tables\DimProperty_BkUp_3rdJune2021.sql" />
+    <Build Include="dbo\Tables\DimProperty_Backup.sql" />
+    <Build Include="dbo\Tables\DimProperty.sql" />
+    <Build Include="dbo\Tables\DeliveryStatus.sql" />
+    <Build Include="dbo\Tables\CPS.sql" />
+    <Build Include="dbo\Tables\Country.sql" />
+    <Build Include="dbo\Tables\CompetitorSuiteCondition.sql" />
+    <Build Include="dbo\Tables\CompetitorInventoryModifications.sql" />
+    <Build Include="dbo\Tables\CompetitorInventory.sql" />
+    <Build Include="dbo\Tables\ComparablesSource.sql" />
+    <Build Include="dbo\Tables\ComparablesModifications.sql" />
+    <Build Include="dbo\Tables\Comparables.sql" />
+    <Build Include="dbo\Tables\CloudOnRamp.sql" />
+    <Build Include="dbo\Tables\City.sql" />
+    <Build Include="dbo\Tables\ChilledWater.sql" />
+    <Build Include="dbo\Tables\BusinessRegion.sql" />
+    <Build Include="dbo\Tables\Bookmark.sql" />
+    <Build Include="dbo\Tables\AssetScoring.sql" />
+    <Build Include="dbo\Views\VW_GetMarkets.sql" />
+    <Build Include="dbo\Views\SupplyCompetitor_Cube.sql" />
+    <Build Include="dbo\Views\Supply_Cube_TestSwet.sql" />
+    <Build Include="dbo\Views\Supply_Cube_Backup_30062021.sql" />
+    <Build Include="dbo\Views\Supply_Cube_20190805.sql" />
+    <Build Include="dbo\Views\Supply_Cube.sql" />
+    <Build Include="dbo\Views\GetRegions.sql" />
+    <Build Include="dbo\Views\GetFooterLinks.sql" />
+    <Build Include="dbo\Views\GetEmails.sql" />
+    <Build Include="dbo\Views\Demand_Cube.sql" />
+    <Build Include="dbo\Views\Comparables_Cube.sql" />
+    <Build Include="Security\FluxUser.sql" />
+    <Build Include="dbo\Functions\udf_GetNumeric.sql" />
+    <Build Include="dbo\Functions\fn_String_To_Table.sql" />
+    <Build Include="dbo\Stored Procedures\TrendQuarters.sql" />
+    <Build Include="dbo\Stored Procedures\Supply_ShellAndPlanned.sql" />
+    <Build Include="dbo\Stored Procedures\Supply_MarketReadyAndConstruction.sql" />
+    <Build Include="dbo\Stored Procedures\Summary.sql" />
+    <Build Include="dbo\Stored Procedures\IsCurrentQuarterLockable.sql" />
+    <Build Include="dbo\Stored Procedures\GetSupplyDemand.sql" />
+    <Build Include="dbo\Stored Procedures\GetSupplyCompetitor.sql" />
+    <Build Include="dbo\Stored Procedures\GetSupply.sql" />
+    <Build Include="dbo\Stored Procedures\GetSchedulerReminderLog.sql" />
+    <Build Include="dbo\Stored Procedures\GetOpportunityModifications.sql" />
+    <Build Include="dbo\Stored Procedures\GetOpportunity.sql" />
+    <Build Include="dbo\Stored Procedures\GetOpportunitiesForApproval.sql" />
+    <Build Include="dbo\Stored Procedures\GetOpportunities.sql" />
+    <Build Include="dbo\Stored Procedures\GetDLRInventoryModifications.sql" />
+    <Build Include="dbo\Stored Procedures\GetDLRInventory.sql" />
+    <Build Include="dbo\Stored Procedures\GetDLRInventoriesForApproval.sql" />
+    <Build Include="dbo\Stored Procedures\GetDLRInventories.sql" />
+    <Build Include="dbo\Stored Procedures\GetDemand.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompetitorInventoryModifications.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompetitorInventory.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompetitorInventoriesForApproval.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompetitorInventories.sql" />
+    <Build Include="dbo\Stored Procedures\GetComparablesModifications.sql" />
+    <Build Include="dbo\Stored Procedures\GetComparablesForApproval.sql" />
+    <Build Include="dbo\Stored Procedures\GetComparablesByID.sql" />
+    <Build Include="dbo\Stored Procedures\GetComparables_old.sql" />
+    <Build Include="dbo\Stored Procedures\GetComparables.sql" />
+    <Build Include="dbo\Stored Procedures\GetBookmarks.sql" />
+    <Build Include="dbo\Stored Procedures\DumpToMainOpportunities.sql" />
+    <Build Include="dbo\Stored Procedures\DumpToMainDLRInventory.sql" />
+    <Build Include="dbo\Stored Procedures\DumpToMainCompetitorInventory.sql" />
+    <Build Include="dbo\Stored Procedures\DumpToMainComparables.sql" />
+    <Build Include="dbo\Stored Procedures\DemandAndPipelineDemand.sql" />
+    <Build Include="dbo\Stored Procedures\CurrentQuarter.sql" />
+    <Build Include="dbo\Stored Procedures\CopyPrevQuarterDLRInventoryData.sql" />
+    <Build Include="dbo\Stored Procedures\CopyPrevQuarterCompetitorInventoryData.sql" />
+    <Build Include="dbo\Stored Procedures\CopyPrevQuarterComparablesData.sql" />
+    <Build Include="dbo\Stored Procedures\AnalysisQuarter.sql" />
+    <Build Include="dbo\Stored Procedures\allsummary1.sql" />
+    <Build Include="dbo\Stored Procedures\allsummary.sql" />
+  </ItemGroup>
+</Project>

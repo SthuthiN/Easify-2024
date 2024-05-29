@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[TempImportComparables] (
+    [Source]            NVARCHAR (255) NULL,
+    [SignQuarter]       NVARCHAR (12)  NULL,
+    [Region]            NVARCHAR (255) NULL,
+    [Market]            NVARCHAR (255) NULL,
+    [Provider]          NVARCHAR (255) NULL,
+    [Address]           NVARCHAR (255) NULL,
+    [Customer]          NVARCHAR (255) NULL,
+    [QuarterID]         INT            NULL,
+    [ProductType]       NVARCHAR (255) NULL,
+    [Redundancy]        NVARCHAR (255) NULL,
+    [NRSF]              FLOAT (53)     NULL,
+    [KW]                FLOAT (53)     NULL,
+    [TermInMonths]      INT            NULL,
+    [AnnualGAAPRent]    FLOAT (53)     NULL,
+    [StartingLeaseRate] FLOAT (53)     NULL,
+    [AverageLeaseRate]  FLOAT (53)     NULL,
+    [TotalFreeRent]     FLOAT (53)     NULL,
+    [TotalTI]           FLOAT (53)     NULL,
+    [NetRent]           FLOAT (53)     NULL,
+    [DateModified]      DATETIME       NULL,
+    [ModifiedBy]        VARCHAR (255)  NULL,
+    [Escalations]       FLOAT (53)     NULL,
+    [RSF]               FLOAT (53)     NULL
+);
+

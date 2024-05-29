@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[CompetitorInventoryModifications] (
+    [ID]                     INT            NOT NULL,
+    [Region]                 NVARCHAR (255) NULL,
+    [Company]                NVARCHAR (255) NULL,
+    [Address]                NVARCHAR (255) NULL,
+    [QuarterID]              INT            NULL,
+    [Market]                 NVARCHAR (255) NULL,
+    [Suite]                  NVARCHAR (255) NULL,
+    [ProductType]            NVARCHAR (255) NULL,
+    [SF]                     FLOAT (53)     NULL,
+    [IT Load(MW)]            FLOAT (53)     NULL,
+    [Suite Condition]        NVARCHAR (255) NULL,
+    [IT Load (kW)]           FLOAT (53)     NULL,
+    [Date Avail]             NVARCHAR (255) NULL,
+    [DateCreated]            DATE           NULL,
+    [DateModified]           DATETIME       NULL,
+    [ModifiedBy]             VARCHAR (255)  NULL,
+    [IsActive]               BIT            NULL,
+    [IsNew]                  BIT            NULL,
+    [Provider]               NVARCHAR (255) NULL,
+    [Quarter Avail]          NVARCHAR (255) NULL,
+    [Source]                 NVARCHAR (255) NULL,
+    [IsDeleted]              BIT            NULL,
+    [TargetProductSize]      NVARCHAR (100) NULL,
+    [LargestContiguousSuite] FLOAT (53)     NULL,
+    CONSTRAINT [PK_SupplyCompetitorModifications] PRIMARY KEY CLUSTERED ([ID] ASC) WITH (FILLFACTOR = 80)
+);
+

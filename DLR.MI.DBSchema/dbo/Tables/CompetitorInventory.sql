@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[CompetitorInventory] (
+    [ID]                     INT            IDENTITY (1, 1) NOT NULL,
+    [Region]                 NVARCHAR (255) NULL,
+    [Company]                NVARCHAR (255) NULL,
+    [Address]                NVARCHAR (255) NULL,
+    [QuarterID]              INT            NULL,
+    [Market]                 NVARCHAR (255) NULL,
+    [Suite]                  NVARCHAR (255) NULL,
+    [ProductType]            NVARCHAR (255) NULL,
+    [SF]                     FLOAT (53)     NULL,
+    [IT Load(MW)]            FLOAT (53)     NULL,
+    [Suite Condition]        NVARCHAR (255) NULL,
+    [IT Load (kW)]           FLOAT (53)     NULL,
+    [Date Avail]             NVARCHAR (255) NULL,
+    [DateCreated]            DATE           CONSTRAINT [DF_SupplyCompetitor_DateCreated] DEFAULT (getdate()) NULL,
+    [DateModified]           DATETIME       NULL,
+    [ModifiedBy]             VARCHAR (255)  NULL,
+    [IsActive]               BIT            CONSTRAINT [DF_SupplyCompetitor_IsActive] DEFAULT ((1)) NULL,
+    [IsNew]                  BIT            NULL,
+    [Provider]               NVARCHAR (255) NULL,
+    [Quarter Avail]          NVARCHAR (255) NULL,
+    [Source]                 NVARCHAR (255) NULL,
+    [IsDeleted]              BIT            NULL,
+    [TargetProductSize]      NVARCHAR (100) NULL,
+    [LargestContiguousSuite] FLOAT (53)     NULL,
+    CONSTRAINT [PK_SupplyCompetitor] PRIMARY KEY CLUSTERED ([ID] ASC) WITH (FILLFACTOR = 80)
+);
+

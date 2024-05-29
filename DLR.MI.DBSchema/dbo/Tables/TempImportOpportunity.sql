@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[TempImportOpportunity] (
+    [Market]             VARCHAR (255)   NULL,
+    [Region]             VARCHAR (255)   NULL,
+    [Stage]              VARCHAR (255)   NULL,
+    [Probability]        FLOAT (53)      NULL,
+    [QuarterID]          INT             NULL,
+    [OpportunityName]    VARCHAR (255)   NULL,
+    [Property]           NVARCHAR (255)  NULL,
+    [Industry]           VARCHAR (255)   NULL,
+    [ProductType]        VARCHAR (255)   NULL,
+    [TotalKW]            FLOAT (53)      NULL,
+    [RaisedSqFt]         FLOAT (53)      NULL,
+    [RentableSf]         FLOAT (53)      NULL,
+    [AnnualizedGAAPRent] FLOAT (53)      NULL,
+    [TransactionType]    VARCHAR (255)   NULL,
+    [OpportunityOwner]   VARCHAR (255)   NULL,
+    [DateModified]       DATETIME        NULL,
+    [ModifiedBy]         VARCHAR (255)   NULL,
+    [RCFirstMonthRent]   NUMERIC (18, 2) NULL,
+    [SupplyDemandRating] NVARCHAR (40)   NULL,
+    [StartingKW]         NUMERIC (10, 2) NULL,
+    [AverageRent]        FLOAT (53)      NULL,
+    [AverageKW]          NUMERIC (10, 2) NULL
+);
+

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[CPS] (
+    [ID]   INT           IDENTITY (1, 1) NOT NULL,
+    [Name] VARCHAR (150) NULL,
+    CONSTRAINT [PK_CPS] PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+
